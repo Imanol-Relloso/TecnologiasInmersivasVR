@@ -5,9 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/ImanolRelloso/Practica1/Scene/Practica1.unity
+    guid: fbea1120ae9f5c04a8fb3476d9bfe4d8
+  - enabled: 1
+    path: Assets/ImanolRelloso/Practica2/Scene/Menu.unity
+    guid: bb972be43c3cee04bb4621bb5d1cdc76
+  - enabled: 1
+    path: Assets/ImanolRelloso/Practica2/Scene/Facil.unity
+    guid: 1236dd446ba5051418c245cd65237a60
+  - enabled: 1
+    path: Assets/ImanolRelloso/Practica2/Scene/Complicado.unity
+    guid: 47285cd78c35eb644aeb39404fbfad55
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ead314f251770a2409194be1ff3b08d4, type: 2}
