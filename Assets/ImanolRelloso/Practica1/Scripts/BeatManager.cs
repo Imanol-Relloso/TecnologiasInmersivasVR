@@ -7,6 +7,8 @@ public class BeatManager : MonoBehaviour
 
     public int points;
 
+    public int pointsToWin;
+
     [SerializeField] private ShowPoints showPoints;
 
     public bool final = false;
@@ -14,12 +16,14 @@ public class BeatManager : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this;
+
+        pointsToWin = GameManager.instance.points;
     }
 
     public void addPoints()
     {
         points++;
-        if (points >= 20)
+        if (points >= pointsToWin)
             end();
 
         showPoints.updatePoints();

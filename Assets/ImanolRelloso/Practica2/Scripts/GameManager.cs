@@ -1,12 +1,16 @@
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     public bool doubleStick;
+    public int points = 20;
+    public bool easy = false;
+
     private void Awake()
     {
         if(instance == null)
@@ -14,19 +18,30 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
-    public void StartEasy()
+    public void Play(bool eas)
     {
-        SceneManager.LoadScene("Facil");
+        easy = eas;
+        SceneManager.LoadScene("Game");
     }
-    public void StartDifficult()
+    public void ChangeStick(bool option)
     {
-        SceneManager.LoadScene("Complicado");
-    }
-    public void ChangeStick()
-    {
-        if (doubleStick) 
-            doubleStick = false;
-        else
+        if (option) 
             doubleStick = true;
+        else
+            doubleStick = false;
+    }
+    public void ChangePoints(int option)
+    {
+        switch (option)
+        {
+            case 0:
+                points = 10; break;
+            case 1:
+                points = 20; break;
+            case 2:
+                points = 30; break;
+            default:
+                break;
+        }
     }
 }

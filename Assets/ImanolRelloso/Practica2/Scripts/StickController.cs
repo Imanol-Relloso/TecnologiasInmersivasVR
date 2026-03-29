@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.XR;
+
 
 public class StickController : MonoBehaviour
 {
@@ -6,6 +8,7 @@ public class StickController : MonoBehaviour
     [SerializeField] private GameObject SingleStick;
     private void Start()
     {
+
         if (GameManager.instance == null)
             Instantiate(SingleStick);
         else 

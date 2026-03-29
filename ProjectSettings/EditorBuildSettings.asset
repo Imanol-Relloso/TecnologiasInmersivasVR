@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/ImanolRelloso/Practica2/Scene/Menu.unity
     guid: bb972be43c3cee04bb4621bb5d1cdc76
   - enabled: 1
-    path: Assets/ImanolRelloso/Practica2/Scene/Facil.unity
+    path: Assets/ImanolRelloso/Practica2/Scene/Game.unity
     guid: 1236dd446ba5051418c245cd65237a60
   - enabled: 1
     path: Assets/ImanolRelloso/Practica2/Scene/Complicado.unity
