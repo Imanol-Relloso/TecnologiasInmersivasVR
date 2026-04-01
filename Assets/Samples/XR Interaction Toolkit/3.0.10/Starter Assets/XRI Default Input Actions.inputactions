@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "name": "XRI Default Input Actions",
     "maps": [
         {
@@ -63,7 +64,7 @@
                     "name": "Eye Gaze Is Tracked",
                     "type": "Button",
                     "id": "ea26ba43-844b-4585-817a-2f124b571813",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -962,7 +963,7 @@
                     "name": "Scale Toggle",
                     "type": "Button",
                     "id": "80ed7d74-56de-473c-bf76-da3bdd16b562",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -975,6 +976,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "MenuPulsado",
+                    "type": "Button",
+                    "id": "0f28c2af-3457-42f1-81bf-ffde9b25847c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1261,6 +1271,17 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "",
                     "action": "Translate Manipulation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "04812879-eb1a-404a-b100-7b26e4deea1b",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MenuPulsado",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
