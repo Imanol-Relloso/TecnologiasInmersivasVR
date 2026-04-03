@@ -5,9 +5,21 @@ public class Palo3 : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.GetComponent<Beat3>())
+        Debug.Log(other);
+        Beat3 beat = other.GetComponent<Beat3>();
+        if (beat == null) return;
+
+        if (GameManager3.instance.gameMode != GameMode.Arrow)
         {
-            beatHited(other.transform.GetComponent<Beat3>());
+            beatHited(beat);
+        }
+        else
+        {
+            ArrowBeat arrow = other.GetComponent<ArrowBeat>();
+            if (arrow != null)
+            {
+                arrow.TryHit(other);
+            }
         }
     }
     private void beatHited(Beat3 beat)

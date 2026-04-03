@@ -443,7 +443,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4265800802868513282}
-  - component: {fileID: 6066498315469960532}
   - component: {fileID: -2300549413094864807}
   m_Layer: 0
   m_Name: BeatSpawner
@@ -487,21 +486,6 @@ Transform:
   - {fileID: 4488513010687171458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6066498315469960532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3934974823213690306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a07fa2a54570d24c848ffa1b76874f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  beat: {fileID: 1858551136270628138, guid: 9ba34701177d0544284e8e56f1a85d79, type: 3}
-  spawnTime: 2
-  bombProb: 15
 --- !u!114 &-2300549413094864807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -515,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beat: {fileID: 1858551136270628138, guid: f20c71f04adaf444f8b0206d72d32dd1, type: 3}
-  arrowBeat: {fileID: 0}
+  arrowBeat: {fileID: 1858551136270628138, guid: 2e9b33eace7552b4aabc468ac175fef8, type: 3}
   spawnTime: 2
   bombProb: 15
 --- !u!1 &4396855499199033208

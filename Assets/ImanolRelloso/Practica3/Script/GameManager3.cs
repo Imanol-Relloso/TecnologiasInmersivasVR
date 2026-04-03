@@ -36,7 +36,7 @@ public class GameManager3 : MonoBehaviour
             case 2:
                 gameMode = GameMode.Arrow; break;
         }
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game3");
     }
     public void ChangeStick(bool option)
     {
