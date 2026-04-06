@@ -12,7 +12,9 @@ public class ShowPoints3 : MonoBehaviour
     {
         if (!BeatManager3.instance.final)
             text.text = BeatManager3.instance.points.ToString();
-        else
+        else if (BeatManager3.instance.win)
             text.text = "Has ganado";
+        else
+            text.text = "Has perdido";
     }
 }

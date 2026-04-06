@@ -15,12 +15,28 @@ public class BeatManager3 : MonoBehaviour
     [SerializeField] private ShowPoints3 showPoints;
 
     public bool final = false;
+    public bool win = false;
+
+    private float duration;
+    private float timePlayed;
 
     private void Awake()
     {
         if (instance == null) instance = this;
 
         pointsToWin = GameManager3.instance.points;
+        duration = GameManager3.instance.song.length;
+        timePlayed = 0;
+    }
+
+    private void Update()
+    {
+        timePlayed += Time.deltaTime;
+        if (duration < timePlayed)
+        {
+            end(false);
+            showPoints.updatePoints();
+        }
     }
 
     public void addPoints(bool bomb)
@@ -29,7 +45,7 @@ public class BeatManager3 : MonoBehaviour
         {
             points++;
             if (points >= pointsToWin)
-                end();
+                end(true);
         }
         else
         {
@@ -38,8 +54,9 @@ public class BeatManager3 : MonoBehaviour
 
         showPoints.updatePoints();
     }
-    private void end()
+    private void end(bool w)
     { 
         final = true;
+        win = w;
     }
 }

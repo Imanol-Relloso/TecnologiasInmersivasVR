@@ -7,7 +7,7 @@ public class BeatSpawner3 : MonoBehaviour
     [SerializeField] private GameObject beat;
     [SerializeField] private GameObject arrowBeat;
 
-    [SerializeField] private float spawnTime;
+    private float spawnTime;
     private float waitedTime;
 
     [SerializeField] private float bombProb;
@@ -19,10 +19,12 @@ public class BeatSpawner3 : MonoBehaviour
         {
             spawnPoints[i] = transform.GetChild(i);
         }
+
+        spawnTime = (60f/GameManager3.instance.BPM) * 2f;
     }
     private void Update()
     {
-        if (BeatManager3.instance.final) return;
+        if (!BeatManager3.instance.win) return;
 
         if (spawnTime <= waitedTime)
         {

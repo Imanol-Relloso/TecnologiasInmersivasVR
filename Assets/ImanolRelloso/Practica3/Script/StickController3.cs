@@ -6,7 +6,7 @@ public class StickController3 : MonoBehaviour
 {
     [SerializeField] private GameObject DoubleStick;
     [SerializeField] private GameObject SingleStick;
-    private void Start()
+    private void Awake()
     {
 
         if (GameManager3.instance == null)

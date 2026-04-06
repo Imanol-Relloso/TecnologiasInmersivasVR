@@ -18,12 +18,19 @@ public class GameManager3 : MonoBehaviour
 
     public GameMode gameMode = GameMode.Easy;
 
+
+    [SerializeField] private SongBPM songBPM;
+    public AudioClip song;
+    public int BPM;
+
     private void Awake()
     {
         if(instance == null)
             instance = this;
-
+        
         DontDestroyOnLoad(gameObject);
+
+        ChangeSong(0);
     }
     public void Play(int gm)
     {
@@ -58,5 +65,14 @@ public class GameManager3 : MonoBehaviour
             default:
                 break;
         }
+    }
+    public void ChangeSong(int option)
+    {
+        songBPM.SetSong(option);
+    }
+
+    public void DestroyGM()
+    {
+        Destroy(gameObject);
     }
 }
